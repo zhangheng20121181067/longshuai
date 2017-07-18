@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/common/style.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <style>
+        html,body{position:relative;}
+        .swiper-container{width:100%;height:100%;}
+        .swiper-slide{text-align:center;display:-webkit-box;
+            display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;
+            -webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;
+            -webkit-align-items:center;align-items:center;}
+
+        .header{height:64px;}
+        .main{height:100%;  position: relative;}
+        .main .wrap{height:100%;position: relative;   color:#fff}
+        .main .slider{ position: relative;  height:100%;background-repeat:no-repeat;background-position: center;background-size:cover;background-color: rgba(29,27,27,1);   float: left; }
+        .main .sliderOne{background-image: url(images/shouye01.png) }
+        .main .sliderTwo{background-image: url(images/shouye02.png) }
+        .main .sliderTwo .content{position:absolute;left:10%;top:20%}
+        .main .sliderThree{background-image: url(images/shouye03.png) }
+        .main .sliderThree .content h3{color:#fff}
+        .main .sliderFour{background-image: url(images/shouye04.png) }
+        .main .sliderFour .content{position:absolute;right:10%;top:20%}
+        .main .sliderFive{background-image: url(images/shouye05.png) }
+        .main .sliderFive .content{position:absolute;left:15%;top:30%}
+        /*共同*/
+        .content h4{font-size: 28px;line-height:40px;}
+        .content p{line-height:34px;font-size: 22px;}
+        .content a{display: inline-block;margin-top:8px;width:187px;height:65px;line-height:65px;text-align:center;background-color: #f5a62f;font-size:22px;color:#3c3b4a}
+        .white h4,.white p{color:#fff}
+        .black h4,.black p{color:#3c3b4a}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container clear">
+            <div class="headerLeft fl"></div>
+            <div class="headerRight fr">
+                <p>营业时间：10:00-4:00</p>
+                <p>联系电话：400-8845-889</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main ">
+        <div class="swiper-container">
+            <div class="swiper-wrapper wrap clear">
+                <div class="swiper-slide slider sliderOne ">
+                    <div class="content white">
+                        <p>驰骋城市之上，驾驭繁忙静谧，匹配优雅格调，定制高端养生。</p>
+                        <p>Running in the city controls the busy and quiet life<br>
+                         has elegant taste style customization high-end health spa</p>
+                    </div>
+                </div>
+                <div class="swiper-slide slider sliderTwo">
+                    <div class="content black">
+                        <h4>关于我们</h4>
+                        <p>每一个细节都<br>是力求完美的精益求精</p>
+                        <a href="aboutUs.html">了解详情</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slider sliderThree">
+                    <div class="content white">
+                        <h4>项目介绍</h4>
+                        <p>每一个细节都<br>是精心设计的匠心独具</p>
+                        <a href="proIntro.html">了解详情</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slider sliderFour ">
+                    <div class="content black">
+                        <h4>养生咨询</h4>
+                        <p>每一个细节都<br>是精心设计的匠心独具</p>
+                        <a href="healthInfor.html">了解详情</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slider sliderFive">
+                    <div class="content white">
+                        <h4>联系我们</h4>
+                        <p>每一个细节都<br>是精心设计的匠心独具</p>
+                        <a href="contactUs.html">了解详情</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="footer textCenter">
+        <ul class="tab clear">
+            <li ><a class="clickAct"  data-index="0">首页</a></li>
+            <li ><a  data-index="1">关于<br>我们</a></li>
+            <li ><a  data-index="2">项目<br>介绍</a></li>
+            <li ><a  data-index="3">养生<br>咨询</a></li>
+            <li ><a  data-index="4">联系<br>我们</a></li>
+            </ul>
+    </div>
+
+    <script src="js/common/jquery-3.1.0.min.js"></script>
+  <!--  <script src="js/common/lunbo.js"></script>-->
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/common/common.js"></script>
+    <script>
+
+        var arr=["首页","关于我们","项目介绍","养生资讯","联系我们"];
+
+        var swiper = new Swiper('.swiper-container', {
+            initialSlide : GetQueryString('actSlideIndex')? GetQueryString('actSlideIndex'):0,  //初始slider
+            onSlideChangeEnd: function(swiper){
+                var index = swiper.activeIndex;
+                $('.footer .tab li a').removeClass('clickAct').eq(index).addClass('clickAct');
+            }
+        });
+        //点击时切换slider 并改变样式
+        $('.footer .tab li').on('click',function(){
+            var $this = $(this);
+            var index = $this.index();
+            swiper.slideTo(index);
+            $('.footer .tab li a').removeClass('clickAct').eq(index).addClass('clickAct');
+
+            if($(this).find("a").hasClass("mouseAct")){
+                $(this).find("a").removeClass("mouseAct")
+            }
+        });
+        //鼠标划入划出时切换slider 并改变样式
+        $('.footer .tab li').hover(function(){
+            if($(this).find("a").hasClass("clickAct")){
+                return;
+            }
+            $(this).find("a").addClass("mouseAct");
+        },function(){
+            $(this).find("a").removeClass("mouseAct");
+        });
+    </script>
+</body>
+</html>

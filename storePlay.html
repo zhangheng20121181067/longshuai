@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>门店展示列表页</title>
+    <link rel="stylesheet" href="css/common/style.css">
+    <style>
+        .header{background-image:url(images/introHeader.png);}
+        .main{padding:80px 0 99px;   background-image:url(images/storeDisplay.png);}
+        .title{padding:40px 0 50px;}
+        .title h4{display:inline-block}
+        .title span{display:inline-block;font-size: 18px;color:#fff;margin-left:8px;}
+
+        .content{padding-bottom: 60px;}
+
+        .picList{height:709px;position: relative}
+        .picList .zhezhao{width:100%;height:100%;background-color: rgba(0,0,0,.3)}
+        .picList .zhezhao:hover{width:100%;height:100%;background-color: rgba(0,0,0,0)}
+        .picList>div{position: absolute;left:0;top:0;background-repeat: no-repeat;background-position: center;  }
+        .picList .picList01{width:318px;left:0;}
+        .picList .picList02{left:338px;}
+        .picList .picList03{width:328px;left:661px;}
+        .picList .picList04{width:186px;left:1021px;}
+        .picList .pic01{height:263px;background-image: url(images/wh01.jpg);top:0; }
+        .picList .pic02{height:173px;background: url(images/cd01.jpg);top:283px;}
+        .picList .pic03{height:233px;background: url(images/cs01.jpg);top:476px }
+
+        .picList .pic04{width:308px;height:166px;background-image: url(images/wh02.jpg) ;top:0;}
+        .picList .pic05{width:225px;height:161px;background: url(images/cd02.jpg) ;top:186px;}
+        .picList .pic06{width:303px;height:130px;background: url(images/cd03.jpg);top:367px;;}
+        .picList .pic07{width:303px;height:192px;background: url(images/zz01.jpg);top:517px;}
+
+        .picList .pic08{height:166px;background: url(images/cq01.jpg); top:0;}
+        .picList .pic09{width:409px;  height:161px;background: url(images/cq02.jpg);left:580px;top:186px; }
+        .picList .pic10{height:173px;background: url(images/xa01.jpg);top:367px; }
+        .picList .pic11{width:538px;height:149px;background: url(images/zz02.jpg);top:560px; }
+
+        .picList .pic12{height:265px;background: url(images/cq03.jpg);}
+        .picList .pic13{height:254px;background: url(images/xa02.jpg);top:285px; }
+
+    </style>
+</head>
+<body>
+<div class="header"></div>
+<div class="main">
+    <div class="container">
+        <div class="title">
+            <h4>门店展示</h4><span>Store display</span>
+        </div>
+        <div class="content picList">
+            <div class="picList01 pic01"><a href="storeXxplay.html"><div class="zhezhao"></div></a></div>
+            <div class="picList01 pic02"><div class="zhezhao"></div></div>
+            <div class="picList01 pic03"><div class="zhezhao"></div></div>
+            <div class="picList02 pic04"><div class="zhezhao"></div></div>
+            <div class="picList02 pic05"><div class="zhezhao"></div></div>
+            <div class="picList02 pic06"><div class="zhezhao"></div></div>
+            <div class="picList02 pic07"><div class="zhezhao"></div></div>
+            <div class="picList03 pic08"><div class="zhezhao"></div></div>
+            <div class="picList03 pic09"><div class="zhezhao"></div></div>
+            <div class="picList03 pic10"><div class="zhezhao"></div></div>
+            <div class="picList03 pic11"><div class="zhezhao"></div></div>
+            <div class="picList04 pic12"><div class="zhezhao"></div></div>
+            <div class="picList04 pic13"><div class="zhezhao"></div></div>
+           <!-- <div class="picList01 picList">
+                <div class="first position"></div>
+                <div class="second position"></div>
+                <div class="third position"></div>
+            </div>
+            <div class="picList02 picList">
+                <div class="first position"></div>
+                <div class="second position"></div>
+                <div class="third position"></div>
+                <div class="fourth position"></div>
+            </div>
+            <div class="picList03 picList">
+                <div class="first position"></div>
+                <div class="second position"></div>
+                <div class="third position"></div>
+                <div class="fourth position"></div>
+            </div>
+            <div class="picList04 picList">
+                <div class="first position"></div>
+                <div class="second position"></div>
+            </div>-->
+        </div>
+    </div>
+
+</div>
+
+
+<div class="footer textCenter">
+    <ul class="tab clear">
+        <li ><a href="index.html?actSlideIndex=0" data-index="0">首页</a></li>
+        <li ><a class="clickAct" href="index.html?actSlideIndex=1" data-index="1">关于<br>我们</a></li>
+        <li ><a  href="index.html?actSlideIndex=2" data-index="2">项目<br>介绍</a></li>
+        <li ><a href="index.html?actSlideIndex=3" data-index="3">养生<br>咨询</a></li>
+        <li ><a href="index.html?actSlideIndex=4" data-index="4">联系<br>我们</a></li>
+    </ul>
+</div>
+
+<script src="js/common/jquery-3.1.0.min.js"></script>
+<script>
+    $('.footer .tab li').hover(function(){
+        if($(this).find("a").hasClass("clickAct")){
+            return;
+        }
+        $(this).find("a").addClass("mouseAct");
+    },function(){
+        $(this).find("a").removeClass("mouseAct");
+    });
+</script>
+</body>
+</html>
