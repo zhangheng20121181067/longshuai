@@ -5,11 +5,8 @@
     <title>联系我们</title>
     <link rel="stylesheet" href="css/common/style.css">
     <style>
-        .header{background-image:url(images/introHeader.png);}
-        .main{padding:80px 0 99px;   background-image:url(images/contactBg.png);}
-        .title{padding:40px 0 50px;}
-        .title h4{display:inline-block}
-        .title span{display:inline-block;font-size: 18px;color:#fff;margin-left:8px;}
+        body{background-image:url(images/contactBg.png);}
+
 
         .content{padding-bottom: 115px;}
 
@@ -33,10 +30,6 @@
         .yue a.weixin{background-position: 0 -105px;   position: relative}
         .yue a.weixin .code{width:113px;height:113px; background:url(images/code.png) no-repeat center;position: absolute;left:-30px;top:60px;  display: none}
         .yue a.phone{background-image: url(images/healPhone_03.png);background-position:center}
-
-        @media screen and (max-width:1200px) {
-
-        }
     </style>
 </head>
 <body>
@@ -90,32 +83,7 @@
 </div>
 
 <script src="js/common/jquery-3.1.0.min.js"></script>
-<script>
-    $('.footer .tab li').hover(function(){
-        if($(this).find("a").hasClass("clickAct")){
-            return;
-        }
-        $(this).find("a").addClass("mouseAct");
-    },function(){
-        $(this).find("a").removeClass("mouseAct");
-    });
-
-    var storeStr;
-    var reqObj={};
-    //默认情况下 促使能够选择第一项
-    $(".ui-select select").each(function(){
-        $(this).val("");
-    });
-    console.log("+++++++++"+$(".store select").val(),"----"+$(".store select option").eq(0).text())
-    // 选择select事件
-    $(".ui-select select").change(function(){
-        storeStr=$("select[name='store']").find("option:selected").text(); //获取店铺信息
-        var selectText=$(this).find("option:selected").text(); //获取文本值
-       // var selectValue=$(this).find("option:selected").val(); //获取value值
-        $(this).siblings().text(selectText);
-       // reqObj[$(this).attr('name')] = selectValue;
-
-    });
-</script>
+<script src="js/common/footerAndHeight.js"></script>
+<script src="js/contactUs.js"></script>
 </body>
 </html>

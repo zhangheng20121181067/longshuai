@@ -6,11 +6,8 @@
     <link rel="stylesheet" href="css/common/style.css">
     <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
     <style>
-        .header{background-image:url(images/introHeader.png);}
-        .main{padding:80px 0 99px;     background-image:url(images/introbg.png);}
-        .title{padding:40px 0 50px;}
-        .title h4{display:inline-block}
-        .title span{display:inline-block;font-size: 18px;color:#fff;margin-left:8px;}
+        body{background-image:url(images/introbg.png); background-color: #1a1c24;}
+
         .content {  width: 100%;}
         .content .swiper-container {width: 80%; height:600px  }
         .content .swiper-slide {width: 50%;  height:100%;  }
@@ -35,7 +32,7 @@
 
 </div>
 
-<div class="main">
+<div class="main padding80">
     <div class="container">
         <div class="title">
             <h4>项目介绍</h4><span>Project introduction</span>
@@ -43,7 +40,7 @@
         <div class="content">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div data-title="标题1111" class="swiper-slide" data-slide-index="0">
                         <div class="pic"></div>
                         <div class="down">
                             <p>阿发发顺丰撒发送丰撒发送到发送到发发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生生嘎嘎是干撒嘎嘎阿发发顺丰撒发送到发送到发生嘎嘎是干撒嘎嘎阿发发顺丰撒发送到发送到发生嘎嘎是干撒嘎嘎</p>
@@ -52,28 +49,28 @@
 
                         <!-- <img src="images/banner01.png" alt="图片加载失败" title="宣传图片">-->
                        </div>
-                    <div  class="swiper-slide">
+                    <div data-title="标题2222" class="swiper-slide" data-slide-index="1">
                         <div class="pic"></div>
                         <div class="down">
                             <p>阿发发顺丰撒发送到发送到发发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生生嘎嘎是干撒嘎嘎阿发发顺丰撒发送到发送到发生嘎嘎是干撒嘎嘎阿发发顺丰撒发送到发送到发生嘎嘎是干撒嘎嘎</p>
                             <div class="downBg clear"></div>
                         </div>
                     </div>
-                    <div  class="swiper-slide">
+                    <div data-title="标题3333" class="swiper-slide" data-slide-index="2">
                         <div class="pic"></div>
                         <div class="down">
                             <p>阿发发顺丰撒发送到发送到发发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生生嘎嘎是干撒嘎嘎阿发发顺丰撒发送到发送到发生嘎嘎是干撒嘎嘎阿发发顺丰撒发送到发送到发生嘎嘎是干撒嘎嘎</p>
                             <div class="downBg clear"></div>
                         </div>
                     </div>
-                    <div  class="swiper-slide">
+                    <div data-title="标题4444" class="swiper-slide" data-slide-index="3">
                         <div class="pic"></div>
                         <div class="down">
                             <p>阿发发顺丰撒发送到发送到发发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生生嘎嘎是干撒嘎嘎阿发发顺丰撒发送到发送到发生嘎嘎是干撒嘎嘎阿发发顺丰撒发送到发送到发生嘎嘎是干撒嘎嘎</p>
                             <div class="downBg clear"></div>
                         </div>
                     </div>
-                    <div  class="swiper-slide">
+                    <div data-title="标题5555" class="swiper-slide" data-slide-index="4">
                         <div class="pic"></div>
                         <div class="down">
                             <p>阿发发顺丰撒发送到发送到发发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生发发顺丰撒发送到发送到发生生嘎嘎是干撒嘎嘎阿发发顺丰撒发送到发送到发生嘎嘎是干撒嘎嘎阿发发顺丰撒发送到发送到发生嘎嘎是干撒嘎嘎</p>
@@ -107,71 +104,9 @@
 </div>
 
 <script src="js/common/jquery-3.1.0.min.js"></script>
-<!--<script src="js/common/lunbo.js"></script>-->
 <script src="js/swiper-3.4.2.min.js"></script>
-<script>
-        var arr=["项目1","项目2","项目3","项目4","项目5"];
-        var $count=0;
-        var $index;
-        var swiper = new Swiper('.swiper-container', {
-            // autoplay: 1000,
-            loop : true,
-            pagination: '.swiper-pagination',
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            slidesPerView: 'auto',
-            coverflow: {
-                rotate: 0,
-                stretch: 20,
-                depth: 120,
-                modifier: 5,
-                slideShadows : true
-            },
-            onSlideChangeEnd: function(){
-                $index=$('.swiper-slide-active').attr('data-swiper-slide-index');
-                console.log($index);
-            }
-        });
-
-
-        $(".change").find("span").html(arr[$count]);
-        $('.change .prev').on('click',function(){
-            // $('.swiper-button-prev').trigger('click');
-            swiper.slidePrev();
-            $count--;
-            if($count<0){
-                $count=4;
-            }
-            $(".change").find("span").html(arr[$count]);
-        });
-        $('.change .next').on('click',function(){
-            swiper.slideNext();
-            $count++;
-            if($count>4){
-                $count=0;
-            }
-            $(".change").find("span").html(arr[$count]);
-        });
-
-        $('.swiper-button-prev').on("click",function(){
-            $('.change .prev').trigger("click");
-        });
-        $('.swiper-button-next').on("click",function(){
-            $('.change .next').trigger("click");
-        });
-
-
-        $('.footer .tab li').hover(function(){
-            if($(this).find("a").hasClass("clickAct")){
-                return;
-            }
-            $(this).find("a").addClass("mouseAct");
-        },function(){
-            $(this).find("a").removeClass("mouseAct");
-        });
-</script>
+<script src="js/common/footerAndHeight.js"></script>
+<script src="js/projectIntro.js"></script>
+<!--<script src="js/common/lunbo.js"></script>-->
 </body>
 </html>

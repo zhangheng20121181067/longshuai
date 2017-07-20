@@ -5,10 +5,8 @@
     <title>养生咨询详情页</title>
     <link rel="stylesheet" href="css/common/style.css">
     <style>
-        .header{background-image:url(images/introHeader.png);}
-        .main{padding:80px 0 99px;    background-image:url(images/healthInfor.png);}
-        .title{padding:40px 0 50px;}
-        .title h4{display:inline-block}
+        body{background-image:url(images/healthInfor.png);}
+
         .title span.block{display:block;font-size: 18px;color:#fff; line-height: 30px}
 
         .article .text{width:880px;}
@@ -37,12 +35,6 @@
 
 
         .content{padding-bottom: 40px;}
-        @media screen and (max-width:1200px) {
-            .article .text{width:73.3%;}
-            .recommend{width:22.3%;}
-            .articleList li>a{width:70%;}
-            .yuyue .yueLeft{width:70%;background-size: contain}
-        }
 
     </style>
 </head>
@@ -51,7 +43,7 @@
 
 </div>
 
-<div class="main">
+<div class="main padding80">
     <div class="container">
         <div class="title">
             <h4>标题1</h4><span class="block">2017-7-5 20:00</span>
@@ -118,15 +110,6 @@
 </div>
 
 <script src="js/common/jquery-3.1.0.min.js"></script>
-<script>
-    $('.footer .tab li').hover(function(){
-        if($(this).find("a").hasClass("clickAct")){
-            return;
-        }
-        $(this).find("a").addClass("mouseAct");
-    },function(){
-        $(this).find("a").removeClass("mouseAct");
-    });
-</script>
+<script src="js/common/footerAndHeight.js"></script>
 </body>
 </html>

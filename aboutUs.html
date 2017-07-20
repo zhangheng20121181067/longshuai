@@ -5,11 +5,7 @@
     <title>关于我们</title>
     <link rel="stylesheet" href="css/common/style.css">
     <style>
-        .header{background-image:url(images/introHeader.png);}
-        .main{padding:80px 0 99px;   background-image:url(images/aboutbg.png);}
-        .title{padding:40px 0 50px;}
-        .title h4{display:inline-block}
-        .title span{display:inline-block;font-size: 18px;color:#fff;margin-left:8px;}
+        body{  background-image:url(images/aboutbg.png); background-color: #1a1c24;   }
 
         .content{padding-bottom: 60px;}
         .content p{font-size: 22px;color: #fff}
@@ -36,20 +32,13 @@
 
         .content .storeShow, .content .right .text{margin-top:12px;}
 
-        @media screen and (max-width:1200px) {
-            .content .left{width:72.7%}
-            .content .left .pic{width:68.8%;}
-            .content .left .text{width:29.8%}
-            .content .right{width:26.3%;}
-        }
+
     </style>
 </head>
 <body>
-<div class="header">
+<div class="header"></div>
 
-</div>
-
-<div class="main">
+<div class="main padding80">
     <div class="container">
         <div class="title">
             <h4>关于我们</h4><span>About us</span>
@@ -57,10 +46,12 @@
         <div class="content clear">
               <div class="left fl">
                   <div class="comIntro clear">
-                      <div class="pic fl"></div>
-                      <div class="text fr table">
-                          <p class="table-cell">公司介绍 <br>Company introduction</p>
-                      </div>
+                      <a href="companyProfile.html"><div class="pic fl"></div></a>
+                      <a href="companyProfile.html">
+                          <div class="text fr table">
+                              <p class="table-cell">公司介绍 <br>Company introduction</p>
+                          </div>
+                      </a>
                   </div>
                   <div class="storeShow clear">
                       <a href="storePlay.html">
@@ -68,22 +59,21 @@
                               <p class="table-cell">门店展示 <br>Company display</p>
                           </div>
                       </a>
-                      <a href="storePlay.html">
-                          <div class="pic fr"></div>
-                      </a>
+                      <a href="storePlay.html"><div class="pic fr"></div></a>
                   </div>
               </div>
             <div class="right fr ">
-                <div class="pic"></div>
-                <div class="text table">
-                    <p class="table-cell">公司历程 <br>Company history</p>
-                </div>
+                <a href="companyHistory.html"><div class="pic"></div></a>
+                <a href="companyHistory.html">
+                    <div class="text table">
+                        <p class="table-cell">公司历程 <br>Company history</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 
 </div>
-
 
 <div class="footer textCenter">
     <ul class="tab clear">
@@ -96,15 +86,6 @@
 </div>
 
 <script src="js/common/jquery-3.1.0.min.js"></script>
-<script>
-    $('.footer .tab li').hover(function(){
-        if($(this).find("a").hasClass("clickAct")){
-            return;
-        }
-        $(this).find("a").addClass("mouseAct");
-    },function(){
-        $(this).find("a").removeClass("mouseAct");
-    });
-</script>
+<script src="js/common/footerAndHeight.js"></script>
 </body>
 </html>

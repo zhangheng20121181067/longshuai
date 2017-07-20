@@ -5,17 +5,15 @@
     <title>门店展示详情页</title>
     <link rel="stylesheet" href="css/common/style.css">
     <style>
-        .header{background-image:url(images/introHeader.png);}
-        .main{padding:80px 0 99px;   background-image:url(images/storeDisplay.png);}
-        .title{padding:40px 0 50px;}
-        .title h4{display:inline-block}
-        .title span{display:inline-block;font-size: 18px;color:#fff;margin-left:8px;}
+        body{ background-image:url(images/storeDisplay.png);}
 
         .content{padding-bottom: 60px;}
 
         .content .sotreLocal{width:709px;height:714px; background: url(images/storeLocal.jpg) no-repeat center}
-        .content .sotreIntro{width:490px;height:714px;   background: url(images/storeIntro.png) no-repeat center;}
+        .content .sotreIntro{width:490px;height:714px;   background: url(images/storeIntro.png) no-repeat center;
+            position: relative}
 
+        .content .sotreIntro .backBtn{cursor:pointer;position:absolute;  width:20px;height:20px;background: url(images/backBtn.png) no-repeat center;  right:12px;top:12px;}
         .content .sotreIntro .wrap{height:100%;padding:0 30px;background-color: rgba(43,41,67,.6)}
         .content .sotreIntro .zhuti{padding:30px 0}
         .content .sotreIntro .zhuti p{color:#fff}
@@ -31,16 +29,12 @@
         .content .sotreIntro .text .btn{width:100px;margin:30px auto}
         .content .sotreIntro .text .prev{background: url(images/introPrev.png) no-repeat center;}
         .content .sotreIntro .text .next{margin-left:35px;background: url(images/introNext.png) no-repeat center;}
-        @media screen and (max-width:1200px) {
-            .content .sotreLocal{width:59%;}
-            .content .sotreIntro{width:41%;}
-            .content .sotreIntro .storeList li{width:47.6%}
-        }
+
     </style>
 </head>
 <body>
 <div class="header"></div>
-<div class="main">
+<div class="main padding80">
     <div class="container">
         <div class="title">
             <h4>门店展示</h4><span>Store display</span>
@@ -48,6 +42,7 @@
         <div class="content clear">
             <div class="sotreLocal fl"></div>
             <div class="sotreIntro fl">
+                <div class="backBtn"></div>
                 <div class="wrap">
                     <div class="zhuti">
                         <h4>武汉-友谊店</h4>
@@ -70,9 +65,7 @@
             </div>
         </div>
     </div>
-
 </div>
-
 
 <div class="footer textCenter">
     <ul class="tab clear">
@@ -85,15 +78,11 @@
 </div>
 
 <script src="js/common/jquery-3.1.0.min.js"></script>
+<script src="js/common/footerAndHeight.js"></script>
 <script>
-    $('.footer .tab li').hover(function(){
-        if($(this).find("a").hasClass("clickAct")){
-            return;
-        }
-        $(this).find("a").addClass("mouseAct");
-    },function(){
-        $(this).find("a").removeClass("mouseAct");
-    });
+    $(".backBtn").on("click",function(){
+        location.href="storePlay.html";
+    })
 </script>
 </body>
 </html>
