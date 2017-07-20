@@ -8,6 +8,17 @@ $(function(){
         onSlideChangeEnd: function(swiper){
             var index = swiper.activeIndex;
             $('.footer .tab li a').removeClass('clickAct').eq(index).addClass('clickAct');
+
+            console.log(index);
+            //第一页或最后一页时禁止切换
+            swiper.unlockSwipeToPrev();
+            swiper.unlockSwipeToNext();
+            if(swiper.isEnd){
+                swiper.lockSwipeToNext();
+            }
+            else if(swiper.activeIndex==0){
+                swiper.lockSwipeToPrev();
+            }
         }
     });
     //点击时切换slider 并改变样式

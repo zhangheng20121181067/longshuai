@@ -20,7 +20,7 @@ $(function(){
         $("html,body").height($mainHeight);
     }
     if($bodyHeight>1080){
-        $("html,body").height("2140px");
+        $("html,body").height("2166px");
     }
    //$(".main").height( $(".main").height()-179);
 });
