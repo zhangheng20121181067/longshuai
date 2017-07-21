@@ -16,7 +16,7 @@ $(function(){
     var $bodyHeight=$("html,body").outerHeight();
     var $mainHeight=$(".main").outerHeight();
     console.log("$bodyHeight"+$bodyHeight,"$mainHeight"+$mainHeight,$(document).scrollTop());
-    /* if($bodyHeight<$mainHeight){
+    if($bodyHeight<$mainHeight){
         $("html,body").height($mainHeight);
     }
     if($bodyHeight>1080){
@@ -25,5 +25,5 @@ $(function(){
 
 
     //区分main样式 高是否有定义100%
-    $(".main").height( $(".main").height()-179);*/
+    $(".main").height( $(".main").height()-179);
 });
