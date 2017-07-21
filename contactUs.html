@@ -29,21 +29,22 @@
         .form .send{width:94px;height:94px;line-height:94px;margin:90px auto 0;border-radius: 50%;}
         .form .send.bg{background-color: rgba(58,62,86,1)}
 
-        .yue{width:640px;height:72px;margin:30px auto 0;    position: relative;}
-        .yue .icon{display:block;width:58px;height:48px;margin-left: 24px;float:left;background-position:center;background-repeat: no-repeat}
-        .yue .icon.phone{padding-left:210px;background-image: url(images/phone.png);margin-left:0;  background-position:210px 0 }
-       /* .yue .icon.phone a{position: absolute;right:80px; bottom:6px; color:#fff;  display: none}
-        .yue .icon.phone:hover a{display: block}*/
+        .yue{display:inline-block;height:72px;margin-top:30px;   }  /* width:640px;*/
+        .yue .icon{display:block;width:58px;height:48px;margin-left: 40px;float:left;background-position:center;background-repeat: no-repeat}
+        .yue .icon.phone{background-image: url(images/phone.png);margin-left:0;  position: relative }
+        .yue .icon.phone a{position: absolute;right:80px; bottom:6px; color:#fff;  display: none}
+        .yue .icon.phone:hover a{display: block}
         .yue .icon.qq{background-image: url(images/qq.png);}
-        .yue .icon.weixin{background-image: url(images/weixin.png);}
-        .yue .haoma{ color:#fff; position:absolute;  left:0;}
-        .yue img{width:113px;height:113px; background:url(images/code.png) no-repeat center;  position:absolute;right:45px;bottom:-8px;}
+        .yue .icon.weixin{background-image: url(images/weixin.png);     position: relative}
+       /* .yue .haoma{ color:#fff; position:absolute;  left:0;}
+        .yue img{width:113px;height:113px; background:url(images/code.png) no-repeat center;
+            position:absolute;right:45px;bottom:-8px;}*/
         .none{display:none}
 
 
-      /*  .yue .icon.weixin .code{width:113px;height:113px; background:url(images/code.png) no-repeat center;
+        .yue .icon.weixin img{width:113px;height:113px; background:url(images/code.png) no-repeat center;
             position: absolute;left:100px; bottom:-32px;  display: none}
-        .yue .icon.weixin:hover .code{display: block}*/
+        .yue .icon.weixin:hover img{display: block}
 
     </style>
 </head>
@@ -74,16 +75,20 @@
                   </div>
 
                  <div class="yue">
-                     <a class="haoma none" href="tel://18086509386">18086509386</a>
+
                      <div class="tubiao">
-                         <div class="phone icon"></div>
+                         <div class="phone icon">
+                             <a class=" " href="tel:18086509386">18086509386</a>
+                         </div>
+
                          <a class="qq icon" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2022640686&site=qq&menu=yes" ></a>
                          <div class="weixin icon">
+                             <img class="" src="images/code.png" alt="">
                          </div>
                      </div>
-                     <img class="none" src="images/code.png" alt="">
+
                  </div>
-                 <a class=" " href="tel://18086509386">18086509386</a>
+                 <a class=" " href="tel:18086509386" style="margin-top:40px;">18086509386</a>
               </div>
         </div>
     </div>
