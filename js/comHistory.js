@@ -10,4 +10,7 @@ $(function(){
      // $(this).find(".line").delay(1000+3000*index).show(1000);
      // $(this).find("span").delay(2000+3000*index).show(1000);
      });
+
+
+     //$(".content").height($("html,body").height())
 });
