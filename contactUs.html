@@ -14,26 +14,35 @@
         .form input{outline: none}
         .form input{display:inline-block; width:640px;height:64px;border-radius: 24px; text-align: center;
             font-size: 28px;color:#fff;  background-color: rgba(58,62,86,.3)}
+        .form input.bg{background-color: rgba(58,62,86,1)}
         .form input.phone{margin-top:15px;}
         .form .ui-select{text-align: center;position: relative}
         .form .ui-select span{display:block;height: 64px; }
+      /*  .form .ui-select span.bg{background-color: rgba(58,62,86,1)}*/
         .form .ui-select span:before{content:"";border:7px solid transparent;border-top:12px solid #fff;position: absolute;right:10px;top:28px;}
         .form .ui-select select{width:100%;height:100%;position: absolute;  left: 0;  top: 0; opacity: 0;  }
 
         .form .store.ui-select{width:640px;height:64px;line-height:64px;border-radius: 24px;background-color: rgba(58,62,86,.3); margin:15px auto 0}
+        .form .store.ui-select.bg{background-color: rgba(58,62,86,1)}
         .form .store.ui-select option{padding:10px;font-size: 20px;color:#fff;background-image:url(images/contactBg.png);background-color:rgba(58,62,86,.8)}
-        .form .send{width:94px;height:94px;line-height:94px;margin:90px auto 0;border-radius: 50%;background-color: rgba(58,62,86,1)}
 
-        .yue{display:inline-block;height:72px;margin-top:30px;}
-        .yue a{display:block;width:58px;height:48px;margin-left: 40px;float:left;background-position:center;background-repeat: no-repeat}
-        .yue a.phone{background-image: url(images/phone.png);margin-left:0;   position: relative}
-        .yue a.phone p{position: absolute;right:80px; bottom:6px;  display: none}
-        .yue a.phone:hover p{display: block}
-        .yue a.qq{background-image: url(images/qq.png);}
-        .yue a.weixin{background-image: url(images/weixin.png);   position: relative}
-        .yue a.weixin .code{width:113px;height:113px; background:url(images/code.png) no-repeat center;
+        .form .send{width:94px;height:94px;line-height:94px;margin:90px auto 0;border-radius: 50%;}
+        .form .send.bg{background-color: rgba(58,62,86,1)}
+
+        .yue{width:640px;height:72px;margin:30px auto 0;    position: relative;}
+        .yue .icon{display:block;width:58px;height:48px;margin-left: 24px;float:left;background-position:center;background-repeat: no-repeat}
+        .yue .icon.phone{padding-left:210px;background-image: url(images/phone.png);margin-left:0;  background-position:210px 0 }
+       /* .yue .icon.phone a{position: absolute;right:80px; bottom:6px; color:#fff;  display: none}
+        .yue .icon.phone:hover a{display: block}*/
+        .yue .icon.qq{background-image: url(images/qq.png);}
+        .yue .icon.weixin{background-image: url(images/weixin.png);}
+        .yue .haoma{ color:#fff; position:absolute;  left:0;}
+        .yue .code{width:113px;height:113px; background:url(images/code.png) no-repeat center;  position:absolute;right:45px;bottom:-8px;}
+        .none{display:none}
+
+      /*  .yue .icon.weixin .code{width:113px;height:113px; background:url(images/code.png) no-repeat center;
             position: absolute;left:100px; bottom:-32px;  display: none}
-        .yue a.weixin:hover .code{display: block}
+        .yue .icon.weixin:hover .code{display: block}*/
 
     </style>
 </head>
@@ -49,29 +58,29 @@
         </div>
         <div class="content table">
              <div class="form table-cell">
-                  <input class="name" type="text" value="姓名">
-                  <input class="phone" type="text" value="电话">
-                  <div class="ui-select store">
-                      <span>店家</span>
+                  <input class="name  addBg" type="text" value="姓名">
+                  <input class="phone addBg" type="text" value="电话">
+                  <div class="ui-select store addBg">
+                      <span class="">店家</span>
                       <select class="" name="store" id="#store" >
                           <option value="店家111">店家111</option>
                           <option value="店家222">店家222</option>
                           <option value="店家333">店家333</option>
                       </select >
                   </div>
-                  <div class="send">
+                  <div class="send bg">
                         预约
                   </div>
 
                  <div class="yue">
-                     <a class="phone" href="javascript:;">
-                         <p>18086509999</p>
-                     </a>
-                     <a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2022640686&site=qq&menu=yes" ></a>
-                     <a class="weixin" href="javascript:;">
-                         <div class="code"></div>
-                     </a>
-
+                     <a class="haoma none" href="tel://18086509461">18086509461</a>
+                     <div class="tubiao">
+                         <div class="phone icon"></div>
+                         <a class="qq icon" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2022640686&site=qq&menu=yes" ></a>
+                         <div class="weixin icon">
+                         </div>
+                     </div>
+                     <div class="code none"></div>
                  </div>
               </div>
         </div>
