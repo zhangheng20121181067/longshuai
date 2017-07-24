@@ -22,7 +22,7 @@ $(function(){
         }
     }
    if($bodyHeight>1080){
-        $("html,body").height("2000px");
+        $("html,body").height("1900px");
     }
    //$(".main").height( $(".main").height()-54-66);
 });
