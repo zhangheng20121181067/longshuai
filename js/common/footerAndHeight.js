@@ -16,11 +16,13 @@ $(function(){
     var $bodyHeight=$("html,body").outerHeight();
     var $mainHeight=$(".main").outerHeight();
     console.log("$bodyHeight"+$bodyHeight,"$mainHeight"+$mainHeight,$(document).scrollTop());
-      if($bodyHeight<$mainHeight){
-        $("html,body").height($mainHeight);
+    if($bodyHeight<=1080){
+        if($bodyHeight<$mainHeight){
+            $("html,body").height($mainHeight+54+66);
+        }
     }
    if($bodyHeight>1080){
-        $("html,body").height("2164px");
+        $("html,body").height("2130px");
     }
    //$(".main").height( $(".main").height()-179);
 });

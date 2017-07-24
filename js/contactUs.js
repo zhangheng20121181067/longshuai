@@ -23,22 +23,6 @@ $(function(){
         $(this).addClass("bg").siblings(".addBg").removeClass("bg");
     });
 
-    //鼠标划入
-    hover($(".icon.weixin"),$(".code"));
-    hover($(".icon.phone"),$(".haoma"));
-    function hover(elm,xyElm){
-        elm.hover(function(){
-            xyElm.removeClass("none")
-        },function(){
-            xyElm.addClass("none")
-        });
-    }
-
-
-
-
-
-
 
     var storeStr;
    // var reqObj={};

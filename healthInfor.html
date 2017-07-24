@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <title>养生咨询列表页</title>
     <link rel="stylesheet" href="css/common/style.css">
+    <link rel="stylesheet" href="css/pagination.css" >
     <style>
         body{ background-image:url(images/healthInfor.png);}
 
 
         .article .text{width:880px;}
-        .text.articleList>ul{height:630px;}
+        .text.articleList>ul{height:500px;}
         .text.articleList li{height:45px;line-height: 45px;font-size: 22px;color:#fff;}  /* articleList.text  为了区分用articleList*/
-        .articleList a{width:600px;display:block;color:#fff;cursor: pointer;  overflow : hidden;white-space:nowrap; text-overflow: ellipsis}
-        .articleList a:hover{color:#fb921b}
+        .articleList li a{width:600px;display:block;color:#fff;cursor: pointer;  overflow : hidden;white-space:nowrap; text-overflow: ellipsis}
+        .articleList li a:hover{color:#fb921b}
         .M-box3{display:inline-block;}
+        .M-box3 a, .M-box3 input{color:#000}
 
         .recommend{width:268px;}
         .recommend .top{height:395px;padding:15px;margin-bottom:45px;background:url(images/healthInforTop.png) no-repeat center;background-color: rgba(255,255,255,.8)}
@@ -28,14 +30,21 @@
             display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow : hidden;text-overflow: ellipsis
         }
 
+        .yuyue{margin-top:107px;}
         .yuyue .yueLeft{width:635px;height:72px;background: url(images/yuyueLeft_03.png) no-repeat center;}
-        .yueRight a{display:block;width:48px;height:48px;margin:12px 0 12px 10px;float:left;background-image: url(images/share.png);background-repeat: no-repeat}
-        .yueRight a.qq{background-position: 0 0;}
-        .yueRight a.weixin{background-position: 0 -105px;  }
-        .yueRight a.phone{background-image: url(images/healPhone_03.png);background-position:center}
+        .yuyue .yueRight .icon{display:block;width:58px;height:72px;margin-left: 20px;float:left;background-position:center;background-repeat: no-repeat}
+        .yuyue .yueRight .icon.phone{background-image: url(images/phone.png);margin-left:0;  position: relative }
+        .yuyue .yueRight .icon.phone a{width:auto;position: absolute;top:-35px; bottom:6px;color:#fff;
+            font-size: 28px;   display: none}
+        .yuyue .yueRight .icon.phone:hover a{display: block}
+        .yuyue .yueRight .icon.qq{background-image: url(images/qq.png);}
+        .yuyue .yueRight .icon.weixin{background-image: url(images/weixin.png);     position: relative}
+        .yuyue .yueRight .icon.weixin img{width:113px;height:113px; background:url(images/code.png) no-repeat center;
+            position: absolute;top:-120px; left:-30px;  display: none }
+        .yuyue .yueRight .icon.weixin:hover img{display: block}
 
 
-        .content{padding-bottom: 40px;}
+        .content{padding-bottom: 36px;}
 
     </style>
 </head>
@@ -62,7 +71,7 @@
                         <li><a class="fl" href="javascript:;">777</a><time class="fr">2017-7-5 20:00</time></li>
                         <li><a class="fl" href="javascript:;">888</a><time class="fr">2017-7-5 20:00</time></li>
                         <li><a class="fl" href="javascript:;">999</a><time class="fr">2017-7-5 20:00</time></li>
-
+                        <li><a class="fl" href="javascript:;">1010</a><time class="fr">2017-7-5 20:00</time></li>
                     </ul>
                     <div class="textCenter">
                         <div class="M-box3"></div>
@@ -70,12 +79,13 @@
                     <div class="yuyue clear">
                         <div class="yueLeft fl"></div>
                         <div class="yueRight fr">
-                            <a class="qq" href="javascript:;"></a>
-                            <a class="weixin" href="javascript:;">
-
-                            </a>
-                            <a class="phone" href="javascript:;"></a>
-
+                            <div class="phone icon">
+                                <a class=" " href="tel:1808650XXXX">1808650XXXX</a>
+                            </div>
+                            <a class="qq icon" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2022640686&site=qq&menu=yes" ></a>
+                            <div class="weixin icon">
+                                <img class="" src="images/code.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -125,5 +135,7 @@
 
 <script src="js/common/jquery-3.1.0.min.js"></script>
 <script src="js/common/footerAndHeight.js"></script>
+<script src="js/jquery.pagination.js"></script>
+<script src="js/healthInfor.js"></script>
 </body>
 </html>

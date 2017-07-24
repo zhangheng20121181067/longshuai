@@ -20,10 +20,10 @@ $(function(){
         $("html,body").height($mainHeight);
     }
     if($bodyHeight>1080){
-        $("html,body").height("2164px");
+        $("html,body").height("2130px");
     }
 
 
     //区分main样式 高是否有定义100%
-    $(".main").height( $(".main").height()-179);
+    $(".main").height( $(".main").height()-54-66);
 });

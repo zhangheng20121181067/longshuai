@@ -7,7 +7,7 @@
     <style>
         body{background-image:url(images/healthInfor.png);}
 
-        .title span.block{display:block;font-size: 18px;color:#fff; line-height: 30px}
+        .title span.block{display:block;font-size: 18px;color:#fff; line-height: 30px;margin-left: 0}
 
         .article .text{width:880px;}
         .article .text .neiRong{height:630px;margin-bottom:21px;}
@@ -28,13 +28,19 @@
         }
 
         .yuyue .yueLeft{width:635px;height:72px;background: url(images/yuyueLeft_03.png) no-repeat center;}
-        .yueRight a{display:block;width:48px;height:48px;margin:12px 0 12px 10px;float:left;background-image: url(images/share.png);background-repeat: no-repeat}
-        .yueRight a.qq{background-position: 0 0;}
-        .yueRight a.weixin{background-position: 0 -105px;  }
-        .yueRight a.phone{background-image: url(images/healPhone_03.png);background-position:center}
+        .yuyue .yueRight .icon{display:block;width:58px;height:72px;margin-left: 20px;float:left;background-position:center;background-repeat: no-repeat}
+        .yuyue .yueRight .icon.phone{background-image: url(images/phone.png);margin-left:0;  position: relative }
+        .yuyue .yueRight .icon.phone a{width:auto;position: absolute;top:-35px; bottom:6px;color:#fff;
+            font-size: 28px;   display: none}
+        .yuyue .yueRight .icon.phone:hover a{display: block}
+        .yuyue .yueRight .icon.qq{background-image: url(images/qq.png);}
+        .yuyue .yueRight .icon.weixin{background-image: url(images/weixin.png);     position: relative}
+        .yuyue .yueRight .icon.weixin img{width:113px;height:113px; background:url(images/code.png) no-repeat center;
+            position: absolute;top:-120px; left:-30px;  display: none }
+        .yuyue .yueRight .icon.weixin:hover img{display: block}
 
 
-        .content{padding-bottom: 40px;}
+        .content{padding-bottom: 36px;}
 
     </style>
 </head>
@@ -57,11 +63,13 @@
                     <div class="yuyue clear">
                         <div class="yueLeft fl"></div>
                         <div class="yueRight fr">
-                            <a class="qq" href="javascript:;"></a>
-                            <a class="weixin" href="javascript:;">
-
-                            </a>
-                            <a class="phone" href="javascript:;"></a>
+                            <div class="phone icon">
+                                <a class=" " href="tel:1808650XXXX">1808650XXXX</a>
+                            </div>
+                            <a class="qq icon" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2022640686&site=qq&menu=yes" ></a>
+                            <div class="weixin icon">
+                                <img class="" src="images/code.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
