@@ -15,14 +15,8 @@ $(function(){
 //给body高度赋值
     var $bodyHeight=$("html,body").outerHeight();
     var $mainHeight=$(".main").outerHeight();
-    console.log("$bodyHeight"+$bodyHeight,"$mainHeight"+$mainHeight,$(document).scrollTop());
-    if($bodyHeight<=1080){
-        if($bodyHeight<$mainHeight){
-            $("html,body").height($mainHeight+54+66);
-        }
+   // console.log("$bodyHeight"+$bodyHeight,"$mainHeight"+$mainHeight,$(document).scrollTop());
+    if($bodyHeight<$mainHeight){
+        $("html,body").height($mainHeight+54+66);
     }
-   if($bodyHeight>1080){
-        $("html,body").height("1907px");
-    }
-   //$(".main").height( $(".main").height()-54-66);
 });

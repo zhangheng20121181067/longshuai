@@ -12,6 +12,7 @@ $(function(){
         $(this).find("a").removeClass("mouseAct");
     });
 
+/*
 //给body高度赋值
     var $bodyHeight=$("html,body").outerHeight();
     var $mainHeight=$(".main").outerHeight();
@@ -22,8 +23,7 @@ $(function(){
     if($bodyHeight>1080){
         $("html,body").height("1907px");  //2130
     }
-
-
     //区分main样式 高是否有定义100%
     $(".main").height( $(".main").height()-54-66);
+    */
 });
