@@ -37,6 +37,13 @@ $(function(){
         "Title":"店家"
     });
 
+   var $selectTitle=$(".form .select .sel-title-box .sel-title");
+    console.log($selectTitle.text(),$selectTitle.attr("value"));
+    $(".form .select .sel-float-div").click(function(){
+        console.log($selectTitle.text()+"-----"+$selectTitle.attr("value"))
+    });
+
+
  /*
  var storeStr;
    // var reqObj={};

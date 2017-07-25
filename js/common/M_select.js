@@ -48,7 +48,6 @@
              
                 // 默认参数
                 var defaultOption = {
-                   
                     ico:1,
                     Img:"",
                     Img2:"",
@@ -186,6 +185,7 @@
                 $(ser_object).parent().parent().find(".sel-float-div").on("click",function(){
                     var sel_text=$(this).text();
                     var sel_value=$(this).attr("value");
+
                     // 切换图片
                     $(this).parent().parent().find(".sel-sign").css("background","url("+Img+")");
                     $(this).parent().parent().find(".sel-sign").css("background-size","100% 100%");
