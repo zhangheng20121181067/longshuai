@@ -5,29 +5,26 @@
     <meta name="viewport" content="width=1200" />
     <title>联系我们</title>
     <link rel="stylesheet" href="css/common/style.css">
+    <link rel="stylesheet" type="text/css" href="css/common/M_select.css">
     <style>
         body{background-image:url(images/contactBg.png);}
 
         .content{padding-bottom: 115px;}
+        .bg{background-color: rgba(58,62,86,1)}
 
         .form{font-size: 28px;color:#fff;}
-        .form input{outline: none}
+        .form input{outline: none;cursor: pointer}
         .form input{display:inline-block; width:640px;height:64px;border-radius: 24px; text-align: center;
             font-size: 28px;color:#fff;  background-color: rgba(58,62,86,.3)}
         .form input.bg{background-color: rgba(58,62,86,1)}
         .form input.phone{margin-top:15px;}
-        .form .ui-select{text-align: center;position: relative}
-        .form .ui-select span{display:block;height: 64px; }
-      /*  .form .ui-select span.bg{background-color: rgba(58,62,86,1)}*/
-        .form .ui-select span:before{content:"";border:7px solid transparent;border-top:12px solid #fff;position: absolute;right:10px;top:28px;}
-        .form .ui-select select{width:100%;height:100%;position: absolute;  left: 0;  top: 0; opacity: 0;  }
 
-        .form .store.ui-select{width:640px;height:64px;line-height:64px;border-radius: 24px;background-color: rgba(58,62,86,.3); margin:15px auto 0}
-        .form .store.ui-select.bg{background-color: rgba(58,62,86,1)}
-        .form .store.ui-select option{padding:10px;font-size: 20px;color:#fff;background-image:url(images/contactBg.png);background-color:rgba(58,62,86,.8)}
+        .form .select{width:640px;height:64px;display:inline-block;margin-top:15px; }
+        .form .select span{padding-left: 61px;}
+        .form .select span.sel-sign{padding-left:0;}
 
         .form .send{width:94px;height:94px;line-height:94px;margin:90px auto 0;border-radius: 50%;}
-        .form .send.bg{background-color: rgba(58,62,86,1)}
+        .form .send.bg{background-color: rgba(58,62,86,1);  }
 
         .yue{display:inline-block;height:72px;margin-top:30px;   }  /* width:640px;*/
         .yue .icon{display:block;width:58px;height:48px;margin-left: 40px;float:left;background-position:center;background-repeat: no-repeat}
@@ -56,14 +53,15 @@
              <div class="form table-cell">
                   <input class="name  addBg" type="text" value="姓名">
                   <input class="phone addBg" type="text" value="电话">
-                  <div class="ui-select store addBg">
-                      <span class="">店家</span>
-                      <select class="" name="store" id="#store" >
-                          <option value="店家111">店家111</option>
-                          <option value="店家222">店家222</option>
-                          <option value="店家333">店家333</option>
-                      </select >
+
+                  <div class="select">
+                     <select class="select02">
+                         <option value="01">第一个下拉</option>
+                         <option value="02" >第二个下拉</option>
+                         <option value="03">第三个下拉</option>
+                     </select>
                   </div>
+
                   <div class="send bg">
                         预约
                   </div>
@@ -95,6 +93,8 @@
 
 <script src="js/common/jquery-3.1.0.min.js"></script>
 <script src="js/common/footerAndHeight.js"></script>
+<script src="js/common/M_select.js"></script>
 <script src="js/contactUs.js"></script>
 </body>
+
 </html>

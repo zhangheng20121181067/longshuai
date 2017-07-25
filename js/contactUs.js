@@ -19,12 +19,26 @@ $(function(){
         });
     }
     //背景色改变
+    $(".form .select .sel-title-box").addClass("bg");
     $(".form .addBg").click(function(){
         $(this).addClass("bg").siblings(".addBg").removeClass("bg");
+        $(".form .select").find(".sel-title-box").css("backgroundColor","rgba(58,62,86,.3)")
+    });
+    $(".form .select").click(function(){
+        $(this).find(".sel-title-box").css("backgroundColor","rgba(58,62,86,1)");
+        $(".form .addBg").removeClass("bg")
     });
 
 
-    var storeStr;
+    // 单独对一个下拉框进行初始化
+    $(".select02").M_select({
+        "ico":"2",
+        "radius":"24px",
+        "Title":"店家"
+    });
+
+ /*
+ var storeStr;
    // var reqObj={};
 //默认情况下 促使能够选择第一项
     $(".ui-select select").each(function(){
@@ -38,4 +52,5 @@ $(function(){
         $(this).siblings().text(selectText);
         // reqObj[$(this).attr('name')] = selectValue;
     });
+    */
 });
