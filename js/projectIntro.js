@@ -25,7 +25,7 @@ $(function(){
             var $actSlide=$('.swiper-slide-active');
             var $index=$actSlide.attr('data-slide-index');
             $(".change").find("span").html($actSlide.attr('data-title'));
-            console.log($index);
+          //  console.log($index);
         }
     });
 
