@@ -17,6 +17,6 @@ $(function(){
     var $mainHeight=$(".main").outerHeight();
    // console.log("$bodyHeight"+$bodyHeight,"$mainHeight"+$mainHeight,$(document).scrollTop());
     if($bodyHeight<$mainHeight){
-        $("html,body").height($mainHeight+54+66);
+        $("html,body").height($mainHeight+64+66);
     }
 });

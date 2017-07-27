@@ -2,7 +2,8 @@
  * Created by zh on 2017/6/1.
  */
 $(function(){
- /* /!*  var curPage = 1;   //当前页码*!/
+    var $baseUrl="http://testwwwshuaispa.ufunet.cn";
+   /* var curPage = 1;   //当前页码*/
     var total;         //总记录数
     var pageCut = 10;  //每页显示数
     var pageCount;     //总页数
@@ -16,16 +17,17 @@ $(function(){
             success: function (keepNewsList) {
                 keepListData=keepNewsList.data;
                 total=keepListData.total;              //数据总条数
-             /!*   curPage = page;                        //当前页*!/
+              /*  curPage = page;                        //当前页*/
                 pageCount=Math.ceil(total/pageCut);    //页数
                 isFlag=flag;
                 //插入内容
                 var listr="";
                 for (var j = 0,lilength = keepListData.data.length; j < lilength; j++) {
-                    listr+='<li><a class="fl" href="keepHealTxt.html?id='+keepListData.data[j].article_id+'"><b></b><span>'+keepListData.data[j].title+'</span></a><time class="fr">'+keepListData.data[j].show_date+'</time></li>';
+                    listr+='<li><a class="fl" href="healthXxInfor.html?id='+keepListData.data[j].article_id+'">'+keepListData.data[j].title+'</a>' +
+                        '<time class="fr">'+keepListData.data[j].show_date+'</time></li>';
                 }
                 $(".articleList ul").html(listr);
-                $(".M-box3").css("marginTop",(10-keepListData.data.length+1)*50)//   固定分页的位置
+               /* $(".M-box3").css("marginTop",(10-keepListData.data.length+1)*50);   //   固定分页的位置*/
                 if(isFlag){
                     getPageBar();
                 }
@@ -52,9 +54,9 @@ $(function(){
                 getList(page, pageCut,false);
             }
         });
-    }*/
+    }
 
-    $('.M-box3').pagination({
+    /*$('.M-box3').pagination({
         //totalData:total,        //如果配置了数据总数和当前一页显示多少条数据，总页数会自动计算，这种情况下再配置总页数无效。（注：数据总数totalData和每页显示的条数showData必须同时配置，否则默认使用总页数pageCount。）
         pageCount: 10,
         //showData: pageCut,
@@ -65,9 +67,9 @@ $(function(){
         prevContent: '上页',
         nextContent: '下页',
         callback: function (api) {    //回调函数 只要点击分页条时即触发
-           /* page = api.getCurrent();
+           /!* page = api.getCurrent();
             console.log(page,isFlag);
-            getList(page, pageCut,false);*/
+            getList(page, pageCut,false);*!/
         }
-    });
+    });*/
 });

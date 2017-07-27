@@ -17,7 +17,7 @@ h4{font-size: 28px;color:#fff}
 
 body{background-position: center; background-repeat: no-repeat;background-size: cover;  background-color: #1a1c24;}   /*background-color: #1a1c24;*/
 /*头部*/
-.header{width:100%;height:54px;background-repeat: no-repeat; background-position:  center;
+.header{width:100%;height:64px;background-repeat: no-repeat; background-position:  center bottom;
         position: fixed;top:0; z-index:10 }
 .header{background-image:url(../../images/introHeader.png);}
 .title{padding:35px 0 }

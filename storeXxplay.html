@@ -10,26 +10,28 @@
 
         .content{padding-bottom: 60px;}
 
-        .content .sotreLocal{width:709px;height:714px; background: url(images/storeLocal.jpg) no-repeat center}
-        .content .sotreIntro{width:490px;height:714px;   background: url(images/storeIntro.png) no-repeat center;
+        .content .storeLocal{width:709px;height:714px; background-image: url(images/storeLocal.jpg);
+        background-repeat: no-repeat;background-position:  center;background-size: cover}
+        .content .storeIntro{width:490px;height:714px;   background: url(images/storeIntro.png) no-repeat center;
             position: relative}
 
-        .content .sotreIntro .backBtn{cursor:pointer;position:absolute;  width:20px;height:20px;background: url(images/backBtn.png) no-repeat center;  right:12px;top:12px;}
-        .content .sotreIntro .wrap{height:100%;padding:0 30px;background-color: rgba(43,41,67,.6)}
-        .content .sotreIntro .zhuti{padding:30px 0}
-        .content .sotreIntro .zhuti p{color:#fff}
-        .content .sotreIntro .storeList li{width:209px;height:121px;overflow: hidden;float:left;   background-position: center;background-repeat: no-repeat}
-        .content .sotreIntro ul.storeList li.pic01{background-image: url(images/storeIntro01.png)}
-        .content .sotreIntro ul.storeList li.pic02{background-image: url(images/storeIntro02.png);margin-left:12px}
-        .content .sotreIntro ul.storeList li.pic03{background-image: url(images/storeIntro03.png);margin-top:12px}
-        .content .sotreIntro ul.storeList li.pic04{background-image: url(images/storeIntro04.png);margin:12px  0 0 12px}
-        .content .sotreIntro .text{padding-top:23px;height:324px;}
-        .content .sotreIntro .text p{height:220px;font-size:20px;line-height:36px;color:#fff;
+        .content .storeIntro .backBtn{cursor:pointer;position:absolute;  width:20px;height:20px;background: url(images/backBtn.png) no-repeat center;  right:12px;top:12px;}
+        .content .storeIntro .wrap{height:100%;padding:0 30px;background-color: rgba(43,41,67,.6)}
+        .content .storeIntro .zhuti{padding:30px 0}
+        .content .storeIntro .zhuti p{color:#fff}
+        .content .storeIntro .storeList li{width:209px;height:121px;overflow: hidden;float:left;   background-position: center;background-repeat: no-repeat}
+        .content .storeIntro ul.storeList li.pic01{background-image: url(images/storeIntro01.png)}
+        .content .storeIntro ul.storeList li.pic02{background-image: url(images/storeIntro02.png);margin-left:12px}
+        .content .storeIntro ul.storeList li.pic03{background-image: url(images/storeIntro03.png);margin-top:12px}
+        .content .storeIntro ul.storeList li.pic04{background-image: url(images/storeIntro04.png);margin:12px  0 0 12px}
+        .content .storeIntro .text{padding-top:23px;height:324px;}
+        .content .storeIntro .text p{height:220px;font-size:20px;line-height:36px;color:#fff;
             display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis}
-        .content .sotreIntro .text span{display:inline-block;width:30px;height:30px;}
-        .content .sotreIntro .text .btn{width:100px;margin:30px auto}
-        .content .sotreIntro .text .prev{background: url(images/introPrev.png) no-repeat center;}
-        .content .sotreIntro .text .next{margin-left:35px;background: url(images/introNext.png) no-repeat center;}
+        .content .storeIntro .text span{display:inline-block;width:30px;height:30px;}
+        .content .storeIntro .text .btn{width:100px;margin:30px auto}
+        .content .storeIntro .text .btn span{background-repeat: no-repeat;background-position:  center; cursor: pointer}
+        .content .storeIntro .text .prev{background-image: url(images/introPrev.png) }
+        .content .storeIntro .text .next{background-image: url(images/introNext.png);margin-left:35px;}
 
     </style>
 </head>
@@ -41,8 +43,8 @@
             <h4>门店展示</h4><span>Store display</span>
         </div>
         <div class="content clear">
-            <div class="sotreLocal fl"></div>
-            <div class="sotreIntro fl">
+            <div class="storeLocal fl"></div>
+            <div class="storeIntro fl">
                 <div class="backBtn"></div>
                 <div class="wrap">
                     <div class="zhuti">
@@ -79,11 +81,68 @@
 </div>
 
 <script src="js/common/jquery-3.1.0.min.js"></script>
+<script src="js/common/common.js"></script>
 <script src="js/common/footerAndHeight.js"></script>
+<script src="js/common/loadAnimate.js"></script>
 <script>
     $(".backBtn").on("click",function(){
         location.href="storePlay.html";
-    })
+    });
+
+    var baseUrl="https://www.easy-mock.com/mock/597963fea1d30433d83f0489/store";
+    var $id=GetQueryString('id');
+    console.log($id);
+
+    $(".btn .prev").on("click",function(){
+        $id--;
+        if($id<=0){
+            $id=1;
+            return
+        }
+        ajaxData();
+    });
+    $(".btn .next").on("click",function(){
+        $id++;
+        if($id>=14){
+            $id=13;
+            return
+        }
+        ajaxData();
+    });
+
+
+    ajaxData();
+    function ajaxData(){
+        $.ajax({
+            type: "get",
+            url:baseUrl+"/index/interfaces/storedetail_id="+$id,
+            success: function (data) {
+                //初始展示效果加了if判断
+                if($id==1){
+                    $(".storeLocal").css("background-image","url(images/storeLocal.jpg)");  //门头照片
+                    var $li=$(".storeList").find("li");
+                    for(var i= 0,length=$li.length;i<length;i++){
+                        $li.eq(i).css("background-image","url(images/storeIntro0"+(i+1)+".png)")
+                    }
+                    $(".text p").html("店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介绍店家介")
+                }else{
+                    $(".storeLocal").css("background-image","url("+data.leftpic+")");  //门头照片
+                    $(".zhuti h4").html(data.storeName.chinese);
+                    $(".zhuti p").html(data.storeName.english);
+
+                    var $li=$(".storeList").find("li");
+                    for(var i= 0,length=$li.length;i<length;i++){
+                        $li.eq(i).css("background-image","url("+data.rightpicList[i].img+")")
+                    }
+
+                    $(".text p").html(data.info)
+                }
+
+
+            }
+        });
+    }
+
 </script>
 </body>
 </html>
