@@ -1,0 +1,38 @@
+
+body{background-image:url(../images/storeDisplay.png);}
+
+.picList{height:6.00rem;position: relative; }  /*709px;*/
+.picList .text{ padding:30px 0 0 20px}
+.picList .text span{float:left}
+.picList .pic01 .text{ padding:60px 0 0 30px}
+.picList .pic02 .text{ padding:15px 0 0 30px}
+.picList .pic03 .text{ padding:25px 0 0 15px}
+.picList .pic04 .text{ padding:20px 0 0 85px}
+.picList .pic06 .text{ padding-left:140px}
+.picList .pic09 .text{ padding-left:220px}
+.picList .pic12 .text{ padding-left:5px}
+.picList p{color:#fff;font-size: 22px; line-height: 20px;  }
+.picList span{color:#fff;font-size: 10px;     text-transform: uppercase;letter-spacing: -1px}
+.picList .zhezhao{width:100%;height:100%;background-color: rgba(0,0,0,.3)}
+.picList .zhezhao:hover{width:100%;height:100%;background-color: rgba(0,0,0,0)}
+.picList>div{position: absolute;left:0;top:0;background-repeat: no-repeat;background-position: center;  }
+.picList .picList01{width:318px;left:0;}
+.picList .picList02{left:338px;}
+.picList .picList03{width:328px;left:661px;}
+.picList .picList04{width:190px;left:1005px;}
+.picList .pic01{height:2.03rem;background-image: url(../images/wh01.jpg);top:0;  letter-spacing: 6px} /* height:263px;*/
+.picList .pic02{height:1.73rem;background-image: url(../images/cd01.jpg);top:2.13rem;   letter-spacing: 7px}
+.picList .pic03{height:2.03rem;background-image: url(../images/cs01.jpg);top:3.96rem;   letter-spacing: 10px}
+
+.picList .pic04{width:308px;height:1.51rem;background-image: url(../images/wh02.jpg) ;top:0;    letter-spacing: 5px}
+.picList .pic05{width:225px;height:1.36rem;background-image: url(../images/cd02.jpg) ;top:1.61rem; letter-spacing: 3px}
+.picList .pic06{width:303px;height:1.30rem;background-image: url(../images/cd03.jpg);top:3.07rem;  letter-spacing: 2px}
+.picList .pic07{width:303px;height:1.52rem;background-image: url(../images/zz01.jpg);top:4.47rem; letter-spacing: 8px}
+
+.picList .pic08{height:1.51rem;background-image: url(../images/cq01.jpg); top:0;  letter-spacing: 7px}
+.picList .pic09{width:409px;  height:1.36rem;background-image: url(../images/cq02.jpg);left:580px;top:1.61rem; letter-spacing: 5px}
+.picList .pic10{height:1.30rem;background-image: url(../images/xa01.jpg);top:3.07rem; letter-spacing: -1px}
+.picList .pic11{width:530px;height:1.51rem;background-image: url(../images/zz02.jpg);top:4.48rem;  letter-spacing: 8px}
+
+.picList .pic12{height:2.25rem;background-image: url(../images/cq03.jpg);   letter-spacing: 10px}
+.picList .pic13{height:1.96rem;background-image: url(../images/xa02.jpg);top:2.40rem;  letter-spacing: 4px}

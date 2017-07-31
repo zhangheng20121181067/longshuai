@@ -31,14 +31,18 @@ $(function(){
         });
     }
 
-
-
+    //上一页
     $(".textCenter .prev").click(function(){
         $id--;
         inforData();
     });
+    //下一页
     $(".textCenter .next").click(function(){
         $id++;
         inforData();
     });
+    //上下页样式改变
+    $(".textCenter").find("span").click(function(){
+        $(this).addClass("bg").siblings().removeClass("bg")
+    })
 });

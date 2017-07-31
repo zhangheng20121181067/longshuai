@@ -1,0 +1,23 @@
+
+body{background-image:url(../images/introbg.png); background-color: #1a1c24;}
+
+.content {  width: 100%;}
+.content .swiper-container {width: 80%; height:5.0rem  }
+.content .swiper-slide {width: 50%;  height:100%;  }
+.content .swiper-slide .pic { width: 100%; height: 2.05rem;background: url(../images/introSlide01.png) no-repeat center;background-size: cover; }
+.content .swiper-slide .down{height: 2.85rem;  background-image: url(../images/proIntroDownbig.png);
+    background-position:center;background-repeat:no-repeat; }
+.content .swiper-slide .down .downBigBg{padding:0.1rem; background-color: rgba(255,255,255,.9);}
+.content .swiper-slide .down .text{height:1.75rem; overflow: hidden}
+.content .swiper-slide .down  p{line-height: .35rem;font-size: 20px;color:#181b24;
+    display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis }
+.content .swiper-slide .down .downBg{height:.95rem;background: url(../images/downBg.png) no-repeat center;
+   /* background-size:cover*/}
+
+.content .swiper-button-next {background-image:none;  right:0;width:25%;  top:0;height:100%}
+.content .swiper-button-prev { background-image:none; left:0;width:25%; top:23%;height:67%}
+
+.content .change{width:240px;height:.99rem;padding:.30rem 0;margin:0 auto}
+.content .change .prev{width:26px;height:100%;background:url(../images/prev.png) no-repeat center; background-size: contain}
+.content .change .next{width:26px;height:100%;background:url(../images/next.png) no-repeat center; background-size: contain}
+.content .change span{display:block;line-height:.99rem;color:#fff;text-align:center;width:72.6%;font-size: 28px;}

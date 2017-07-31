@@ -44,4 +44,5 @@ $(function(){
     if (actSlideIndex) {
         $('.footer .tab li').eq(actSlideIndex).click();
     }
+
 });

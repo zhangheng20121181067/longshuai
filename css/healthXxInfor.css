@@ -1,0 +1,44 @@
+
+body{background-image:url(../images/healthInfor.png);}
+
+.title{padding:0.15rem 0}
+.title span.block{display:block;font-size: 18px;color:#fff; line-height: 30px;margin: 0}
+.title a{line-height:65px;}
+
+.article .text{width:880px;}
+.article .text .neiRong{height:3.80rem; overflow: hidden}
+.article .text p{color:#fff;font-size: 20px;line-height: .4rem;    display: block;display:-webkit-box;
+    -webkit-line-clamp:9;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis  }
+
+.article .text .textCenter{ width:180px;margin:.1rem auto 0;height:40px; }
+.article .text .textCenter span{width:68px;line-height: 40px;color:#fff;cursor: pointer; font-size: 18px; float: left}
+.article .text .textCenter span.next{margin-left:40px; font-size: 18px;}
+
+.yuyue{margin-top:.10rem;}
+.yuyue .yueLeft{width:635px;height:1.00rem;background: url(../images/yuyueLeft_03.png) no-repeat center;}
+.yuyue .yueRight .icon{display:block;width:58px;height:1.00rem;margin-left: .20rem;float:left;background-position:center;background-repeat: no-repeat}
+.yuyue .yueRight .icon.phone{background-image: url(../images/phone.png);margin-left:0;  position: relative }
+.yuyue .yueRight .icon.phone a{width:auto;position: absolute;top:-.35rem; bottom:6px;color:#f5a62f;
+    font-size: 28px;   display: none}
+.yuyue .yueRight .icon.phone:hover a{display: block}
+.yuyue .yueRight .icon.qq{background-image: url(../images/qq.png);}
+.yuyue .yueRight .icon.weixin{background-image: url(../images/weixin.png);     position: relative}
+.yuyue .yueRight .icon.weixin img{width:1.13rem;height:1.13rem; background:url(../images/code.png) no-repeat center;
+    position: absolute;top:-1.20rem; left:-.30rem;  display: none }
+.yuyue .yueRight .icon.weixin:hover img{display: block}
+
+.recommend{width:268px;}
+.recommend .top{height:3.15rem;padding:.15rem .15rem 0;margin-bottom:.10rem;background:url(../images/healthInforTop.png) no-repeat center;background-color: rgba(255,255,255,.8)}
+.recommend .top>a{display:block;height:1.00rem;background: url(../images/recommend.png) no-repeat center;}
+.recommend .top ul{height:1.70rem;overflow: hidden}
+.recommend .down{height:2.15rem;padding:.15rem .15rem 0; background-color: #f5a62f}
+.recommend .down ul{height:1.70rem;overflow: hidden}
+.recommend .down h3, .recommend .down a{color:#fff;}
+
+.recommend h3{height:.40rem;line-height: .40rem;color:#282831;font-size: 22px; }
+.recommend li a{color:#282831;height:.35rem;line-height: .35rem; font-size: 18px;
+    display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow : hidden;text-overflow: ellipsis
+}
+
+/*.content{padding-bottom: 1.06rem;}*/
+.bg{background-color: #f5a62f}

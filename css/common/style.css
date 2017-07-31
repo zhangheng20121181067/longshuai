@@ -11,30 +11,39 @@ a:hover{ color:#fb921b }
 .table{display: table;}
 .table-cell{display: table-cell;  text-align: center; vertical-align: middle;}
 .textCenter{ text-align: center}
-.container{ width:1200px;margin:0 auto;   }  /*padding:0 10px*/
-h4{font-size: 28px;color:#fff}
-.padding80{position:relative;top:64px;bottom:99px;}
+
+.container{ width:1200px;margin:0 auto;   }
+
+h4{font-size: 26px;color:#fff}
+.padding80{position:relative;top:64px;bottom:66px;}
 
 body{background-position: center; background-repeat: no-repeat;background-size: cover;  background-color: #1a1c24;}   /*background-color: #1a1c24;*/
 /*头部*/
 .header{width:100%;height:64px;background-repeat: no-repeat; background-position:  center bottom;
-        position: fixed;top:0; z-index:10 }
+        position: fixed;top:0; z-index:10 }  /* 64px;*/
 .header{background-image:url(../../images/introHeader.png);}
-.title{padding:35px 0 }
-.title h4{display:inline-block}
-.title span{display:inline-block;font-size: 18px;color:#fff;margin-left:8px;}
+.title{padding:0.15rem 0 }   /* 35px*/
+.title h4{    }  /*display:inline-block*/
+.title span{font-size: 18px;color:#fff;margin-left:8px;     margin-top:12px;} /*display:inline-block;*/
+.title a{font-size:26px;color:#fff; font-style: italic}
 
 
 /*尾部*/
-.footer{width:100%;height:66px;background-color:rgba(60,59,74,.5);position: fixed;bottom:0; z-index:100}
-.footer .tab{display:inline-block;}
+.footer{width:100%;height:66px;background-color:rgba(60,59,74,.5);position: fixed;bottom:0; z-index:10}
+.footer .tab{width:490px;margin: 0 auto    }/*display:inline-block;  height:66px;*/
 .footer li{ width:98px;display: table;float:left;  cursor: pointer}
-.footer li a{ height:62px;border-top:4px solid transparent;
-        display: table-cell;text-align: center;vertical-align: middle;   color:#fff;font-size: 20px}
+.footer li a{ height: 62px;border-top:4px solid transparent;
+        display: table-cell;text-align: center;vertical-align: middle;   color:#fff;font-size: 20px} /*height:62px; 20px*/
 .footer li a.clickAct{border-top:4px solid #f5a62f; background-color: #fffadf; color:#3c3b4a; }
 .footer li a.mouseAct{background-color:rgba(60,59,74,.7); border-top:4px solid transparent;}
 .footer li a.mouseAct{color:#fff;}
 
-
+/*
+@media screen and (min-width: 1200px){
+       .container{
+               width:96%;margin:0 auto;
+       }
+}
+*/
 
 

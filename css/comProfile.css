@@ -1,0 +1,14 @@
+
+body{ background-image:url(../images/aboutbg.png); background-color: #1a1c24;}
+
+.article .text{width:600px;height:5.55rem; overflow: hidden}/* height:606px;*/
+.article .text p{height:5.55rem;color:#fff;font-size: 20px;line-height: .40rem;    display: block;display:-webkit-box;
+    -webkit-line-clamp:13;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis  }
+
+.article .videoYue{width:532px;}
+.article .videoYue .video{height:3.25rem;} /* height:606px;*/
+.article .videoYue .video video{width:100%;height:100%; object-fit: fill}
+.article .videoYue .pic {height:1.95rem; background: url(../images/companyAbUs.jpg) no-repeat center}  /* height:606px;*/
+.article .videoYue .yue{height:0.62rem;line-height: 0.62rem;text-align: center; background-color: rgb(41,41,59); }
+.article .videoYue .yue a{color:#fff;font-size: 22px; display: block}
+/*.content{padding-bottom: 1.65rem;}*/

@@ -5,33 +5,16 @@
     <meta name="viewport" content="width=1200" />
     <title>公司简介</title>
     <link rel="stylesheet" href="css/common/style.css">
-    <style>
-        body{ background-image:url(images/aboutbg.png); background-color: #1a1c24;}
-
-        .article .text{width:600px;height:606px;}
-        .article .text p{height:606px;color:#fff;font-size: 22px;line-height: 36px;    display: block;display:-webkit-box;
-            -webkit-line-clamp:17;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis  }
-
-        .article .videoYue{width:532px;}
-        .article .videoYue .video{height:349px;}
-        .article .videoYue .video video{width:100%;height:100%;}
-        .article .videoYue .pic {height:195px;}
-        .article .videoYue .yue{height:62px;line-height: 62px;text-align: center; background-color: rgb(41,41,59); }
-        .article .videoYue .yue a{color:#fff;font-size: 28px;}
-        .content{padding-bottom: 145px;}
-
-
-    </style>
+    <link rel="stylesheet" href="css/comProfile.css">
 </head>
 <body>
-<div class="header">
-
-</div>
+<div class="header"></div>
 
 <div class="main padding80">
     <div class="container">
-        <div class="title">
-            <h4>公司简介</h4><span >Company profile</span>
+        <div class="title clear">
+            <h4 class="fl">公司简介</h4><span class="fl">Company profile</span>
+            <a class="fr" href="javascript:history.go(-1)">返回上一级>></a>
         </div>
         <div class="content clear">
             <div class="article clear">
@@ -40,15 +23,14 @@
                 </div>
                 <div class="videoYue fr">
                     <div class="video">
-                        <embed src="media/xuanchuan1.mp4"
-                               allowFullScreen="true" quality="high" width="532" height="349">
-                        </embed>
-                        <!--<video src="media/xuanchuan.mp4" controls >
+                       <!-- <embed src="media/index.mp4"
+                               allowFullScreen="true" quality="high" width="500" height="100">
+                        </embed>-->
+                        <video id="myVideo" src="media/xuanchuan.mp4" autoplay loop> <!-- poster="images/shouye01.jpg"-->
                             您的浏览器不支持 video 标签。
-                        </video>-->
-                       <!-- <img src="images/companyVideo.jpg" alt="">-->
+                        </video>
                     </div>
-                    <div class="pic"><img src="images/companyAbUs.jpg" alt=""></div>
+                    <div class="pic"></div>
                     <div class="yue">
                         <a href="contactUs.html">点击预约</a>
                     </div>
@@ -57,6 +39,7 @@
         </div>
     </div>
 </div>
+
 <div class="footer textCenter">
     <ul class="tab clear">
         <li ><a href="index.html?actSlideIndex=0" data-index="0">首页</a></li>
@@ -70,5 +53,7 @@
 <script src="js/common/jquery-3.1.0.min.js"></script>
 <script src="js/common/footerAndHeight.js"></script>
 <script src="js/common/loadAnimate.js"></script>
+
+<script src="js/common/resize.js"></script>
 </body>
 </html>

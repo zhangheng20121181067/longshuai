@@ -1,0 +1,27 @@
+
+body{ background-image:url(../images/storeDisplay.png);}
+
+/*.content{padding-bottom: .60rem;}*/
+
+.content .storeLocal{width:709px;height:6.24rem; background-image: url(../images/storeLocal.jpg);
+    background-repeat: no-repeat;background-position:  center;background-size: cover}
+.content .storeIntro{width:490px;height:6.24rem;   background: url(../images/storeIntro.png) no-repeat center;
+    position: relative}
+
+.content .storeIntro .backBtn{cursor:pointer;position:absolute;  width:20px;height:.20rem;background: url(../images/backBtn.png) no-repeat center;  right:12px;top:12px;}
+.content .storeIntro .wrap{height:100%;padding:0 30px;background-color: rgba(43,41,67,.6)}
+.content .storeIntro .zhuti{padding:.10rem 0}
+.content .storeIntro .zhuti p{color:#fff;font-size:16px;}
+.content .storeIntro .storeList li{width:209px;height:1.21rem;overflow: hidden;float:left;   background-position: center;background-repeat: no-repeat}
+.content .storeIntro ul.storeList li.pic01{background-image: url(../images/storeIntro01.png)}
+.content .storeIntro ul.storeList li.pic02{background-image: url(../images/storeIntro02.png);margin-left:12px}
+.content .storeIntro ul.storeList li.pic03{background-image: url(../images/storeIntro03.png);margin-top:12px}
+.content .storeIntro ul.storeList li.pic04{background-image: url(../images/storeIntro04.png);margin:12px  0 0 12px}
+.content .storeIntro .text{padding-top:.23rem;height:2.85rem; overflow: hidden}
+.content .storeIntro .text p{height:1.80rem;font-size:20px;line-height:.36rem;color:#fff;
+    display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis}
+.content .storeIntro .text span{display:inline-block;width:30px;height:.35rem;}
+.content .storeIntro .text .btn{width:100px;height:.35rem; margin:.10rem auto 0 }
+.content .storeIntro .text .btn span{float:left;background-repeat: no-repeat;background-position:  center; cursor: pointer}
+.content .storeIntro .text .prev{background-image: url(../images/introPrev.png) }
+.content .storeIntro .text .next{background-image: url(../images/introNext.png);margin-left:.35rem;}

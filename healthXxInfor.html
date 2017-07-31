@@ -5,60 +5,18 @@
     <meta name="viewport" content="width=1200" />
     <title>养生咨询详情页</title>
     <link rel="stylesheet" href="css/common/style.css">
-    <style>
-        body{background-image:url(images/healthInfor.png);}
-
-        .title span.block{display:block;font-size: 18px;color:#fff; line-height: 30px;margin-left: 0}
-
-        .article .text{width:880px;}
-        .article .text .neiRong{height:505px; overflow: hidden}
-        .article .text p{color:#fff;font-size: 20px;line-height: 30px;    display: block;display:-webkit-box;
-            -webkit-line-clamp:16;-webkit-box-orient:vertical;overflow:hidden;text-overflow: ellipsis  }
-
-        .article .text .textCenter{height:40px; margin-top:10px;}
-        .article .text .textCenter span{width:68px;height:40px;line-height: 40px;display: inline-block;color:#fff;cursor: pointer}
-        .article .text .textCenter span.next{margin-left:40px;}
-
-        .yuyue{margin-top:10px;}
-        .yuyue .yueLeft{width:635px;height:72px;background: url(images/yuyueLeft_03.png) no-repeat center;   }
-        .yuyue .yueRight .icon{display:block;width:58px;height:72px;margin-left: 20px;float:left;background-position:center;background-repeat: no-repeat}
-        .yuyue .yueRight .icon.phone{background-image: url(images/phone.png);margin-left:0;  position: relative }
-        .yuyue .yueRight .icon.phone a{width:auto;position: absolute;top:-35px; bottom:6px;color:#f5a62f;
-            font-size: 28px;   display: none}
-        .yuyue .yueRight .icon.phone:hover a{display: block}
-        .yuyue .yueRight .icon.qq{background-image: url(images/qq.png);}
-        .yuyue .yueRight .icon.weixin{background-image: url(images/weixin.png);     position: relative}
-        .yuyue .yueRight .icon.weixin img{width:113px;height:113px; background:url(images/code.png) no-repeat center;
-            position: absolute;top:-120px; left:-30px;  display: none }
-        .yuyue .yueRight .icon.weixin:hover img{display: block}
-
-        .recommend{width:268px;}
-        .recommend .top{height:405px;padding:15px 15px 0;margin-bottom:40px;
-            background:url(images/healthInforTop.png) no-repeat center;background-color: rgba(255,255,255,.8)}
-        .recommend .top ul{height:150px;overflow: hidden}
-        .recommend .top>a{display:block;height:225px;background: url(images/recommend.png) no-repeat center;}
-        .recommend .down{height:185px;padding:15px 15px 0; background-color: rgb(227,164,69)}
-        .recommend .down ul{height:145px;overflow: hidden}
-        .recommend .down h3, .recommend .down a{color:#fff;}
-
-        .recommend h3{height:40px;line-height: 40px;color:#282831;font-size: 22px; }
-        .recommend li a{color:#282831;height:28px;line-height: 28px; font-size: 20px;
-            display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow : hidden;text-overflow: ellipsis
-        }
-
-        .content{padding-bottom: 36px;}
-        .bg{background-color: #f5a62f}
-    </style>
+    <link rel="stylesheet" href="css/healthXxInfor.css">
 </head>
 <body>
-<div class="header">
-
-</div>
+<div class="header"></div>
 
 <div class="main padding80">
     <div class="container">
-        <div class="title">
-            <h4>标题1</h4><span class="block">2017-7-5 20:00</span>
+        <div class="title clear">
+            <div class="fl">
+                <h4>标题1</h4><span class="block">2017-7-5 20:00</span>
+            </div>
+            <a class="fr" href="javascript:history.go(-1)">返回上一级>></a>
         </div>
         <div class="content clear">
             <div class="article clear">
@@ -116,7 +74,6 @@
 
 </div>
 
-
 <div class="footer textCenter">
     <ul class="tab clear">
         <li ><a href="index.html?actSlideIndex=0" data-index="0">首页</a></li>
@@ -132,10 +89,8 @@
 <script src="js/common/footerAndHeight.js"></script>
 <script src="js/common/loadAnimate.js"></script>
 <script src="js/healthXxInfor.js"></script>
+
+<script src="js/common/resize.js"></script>
 </body>
-<script>
-    $(".textCenter").find("span").click(function(){
-        $(this).addClass("bg").siblings().removeClass("bg")
-    })
-</script>
+
 </html>

@@ -5,43 +5,8 @@
     <meta name="viewport" content="width=1200" />
     <title>首页</title>
     <link rel="stylesheet" href="css/common/style.css">
-    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
-    <style>
-        .main{height:100%;   position: relative; }
-        .header{background-image: none}
-
-        .main .container{height:100%;position: relative;  }
-
-        .swiper-container{width:100%;height:100%;}
-      /*  .swiper-slide{text-align:center;}*/
-        .header{background-color: rgba(60,59,74,.8);}
-        .headerLeft{width:270px;height:64px;background: url(images/logo.png) no-repeat center;background-size: contain}
-        .headerRight p{font-size: 20px;color:#f3e489;line-height: 32px;}
-
-
-         .slider{ position: relative;  height:100%;background-repeat:no-repeat;background-position: center;
-             background-size:cover;background-color: rgba(29,27,27,1);   float: left; }
-         .sliderOne{background-image: url(images/shouye01.jpg) }
-         .sliderTwo{background-image: url(images/shouye02.jpg) }
-         .sliderTwo .content{position:absolute;left:6.7%;top:23.9%}
-         .sliderThree{background-image: url(images/shouye03.png) }
-         .sliderThree .content h3{color:#fff}
-         .sliderFour{background-image: url(images/shouye04.jpg) }
-         .sliderFour .content{position:absolute;right:6.7%;top:23.9%}
-         .sliderFive{background-image: url(images/shouye05.png) }
-         .sliderFive .content{position:absolute;left:12.5%;top:32.6%}
-        /*共同*/
-        .content h4{font-size: 24px;line-height:40px;}
-        .content p{line-height:34px;font-size: 20px;}
-        .content a{display: inline-block;margin-top:8px;width:130px;height:56px;line-height:56px;
-            text-align:center;background-color: #f5a62f;font-size:20px;color:#3c3b4a}
-        .white h4,.white p{color:#fff}
-        .black h4,.black p{color:#3c3b4a}
-
-
-        video{width:100%;height:80%;position: absolute}
-        embed{position: absolute;z-index: 100}
-    </style>
+    <link rel="stylesheet" href="css/common/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="header">
@@ -58,18 +23,19 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper clear">
                     <div class="swiper-slide slider sliderOne " data-slide-index="0">
-                            <embed src="media/index.mp4"
-                                   allowFullScreen="true" quality="high" width="100%" height="100%">
-                            </embed>
-                           <!-- <video src="media/xuanchuan1.mp4" controls>
-                            </video>-->
-                      <!--  <div class="container table">
+                          <!--  <embed  src="media/index02.mp4"
+                                   allowFullScreen="true" quality="high" width="" height="">
+                            </embed>-->
+                            <video id="myVideo" src="media/indexQu.mp4"   autoplay loop> <!-- poster="images/shouye01.jpg"-->
+                                您的浏览器不支持 video 标签。
+                            </video>
+
+                            <div class="container table">
                                  <div class="content white table-cell">
                                       <p>驰骋城市之上，驾驭繁忙静谧，匹配优雅格调，定制高端养生。</p>
                                       <p>Running in the city controls the busy and quiet life<br>has elegant taste style customization high-end health spa</p>
                                  </div>
                             </div>
-                       -->
                     </div>
                     <div class="swiper-slide slider sliderTwo" data-slide-index="1">
                         <div class="container table">
@@ -122,10 +88,12 @@
     </div>
 
     <script src="js/common/jquery-3.1.0.min.js"></script>
-    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/common/swiper-3.4.2.min.js"></script>
     <script src="js/common/common.js"></script>
-  <!--  <script src="js/common/footerAndHeight.js"></script>-->
     <script src="js/index.js"></script>
+    <script src="js/indexVideo.js"></script>
+
+    <script src="js/common/resize.js"></script>
 </body>
 
 </html>

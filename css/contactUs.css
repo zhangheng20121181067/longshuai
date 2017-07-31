@@ -1,0 +1,30 @@
+
+body{background-image:url(../images/contactBg.png); }
+
+/*.content{padding-bottom: 1.20rem;}*/
+.bg{background-color: rgba(58,62,86,1)}
+
+.form{font-size: 24px;color:#fff;}
+.form input{outline: none;cursor: pointer}
+.form input{display:inline-block; width:640px;height:64px;border-radius: 24px; text-align: center;
+    font-size: 24px;color:#fff;  background-color: rgba(58,62,86,.3)}
+.form input.bg{background-color: rgba(58,62,86,1)}
+.form input.phone{margin-top:15px;}
+
+.form .select{width:640px;height:64px;display:inline-block;margin-top:15px; }
+.form .select span{padding-left: 61px;}
+.form .select span.sel-sign{padding-left:0;}
+
+.form .send{width:94px;height:94px;line-height:94px;margin:.4rem auto 0;border-radius: 50%;}
+.form .send.bg{background-color: rgba(58,62,86,1);  }
+
+.yue{display:inline-block;height:72px;margin-top:.30rem;   }  /* width:640px;*/
+.yue .icon{display:block;width:58px;height:48px;margin-left: 40px;float:left;background-position:center;background-repeat: no-repeat}
+.yue .icon.phone{background-image: url(../images/phone.png);margin-left:0;  position: relative }
+.yue .icon.phone a{position: absolute;right:80px; bottom:6px; color:#f5a62f;  display: none}
+.yue .icon.phone:hover a{display: block}
+.yue .icon.qq{background-image: url(../images/qq.png);}
+.yue .icon.weixin{background-image: url(../images/weixin.png);     position: relative}
+.yue .icon.weixin img{width:1.13rem;height:1.13rem; background:url(../images/code.png) no-repeat center;
+    position: absolute;left:1.00rem; bottom:-.32rem;  display: none}
+.yue .icon.weixin:hover img{display: block}

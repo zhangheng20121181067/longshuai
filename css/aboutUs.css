@@ -1,0 +1,27 @@
+
+body{  background-image:url(../images/aboutbg.png); background-color: #1a1c24;   }
+
+/*.content{padding-bottom: 1.00rem;} */
+.content p{font-size: 22px;color: #fff}
+.content .pic, .content .text{background-position: center;background-size: cover;background-repeat: no-repeat;}
+
+.content .left{width:872px}
+.content .left .pic{width:600px;background-color: #362e2b;opacity: .7}
+.content .left .pic:hover{opacity: 1}
+.content .left .text{width:260px}
+
+.content .comIntro .pic{height:2.76rem;background-image: url(../images/comIntro.png);} /* 336px*/
+.content .comIntro .text{height:2.76rem;background-image: url(../images/comIntroTT.png);background-color:rgba(245,166,47,.7)}/* 336px*/
+.content .comIntro .text:hover{background-color:rgba(245,166,47,1)  }
+
+.content .storeShow .pic{height:3.00rem;background-image: url(../images/storeShow.png);} /* 320px*/
+.content .storeShow .text{height:3.00rem;background-image: url(../images/storeShowTT.png);background-color:rgba(136,171,218,.7)}
+.content .storeShow .text:hover{background-color:rgba(136,171,218,1)  }
+
+.content .right{width:316px;}
+.content .right .pic{height:3.90rem;background-image: url(../images/comHis.png);background-color: #f5a62f;opacity: .7} /* 470px*/
+.content .right .pic:hover{opacity: 1}
+.content .right .text{width:100%;height:1.86rem;background-image: url(../images/comHisTT.png);background-color:rgba(132,204,201,.7)} /* 336px*/
+.content .right .text:hover{background-color:rgba(132,204,201,1)  }
+
+.content .storeShow, .content .right .text{margin-top:0.12rem;}
